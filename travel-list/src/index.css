@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2.4rem;
+  font-family: "Quicksand", sans-serif;
+  color: #5a3e2b;
+  font-weight: 500;
+  background-color: #fdf2e9;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+h1 {
+  text-align: center;
+  background-color: #f4a226;
+  font-family: "Monoton";
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  word-spacing: 30px;
+  letter-spacing: -5px;
+  padding: 2.4rem 0;
+  color: #5a3e2b;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-form {
+  background-color: #e67e22;
+  padding: 3.2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+h3 {
+  margin-right: 1.6rem;
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+button,
+select,
+input {
+  background-color: #ffebb3;
+  color: #5a3e2b;
+  font-family: inherit;
+  border: 2px solid transparent;
+  border-radius: 10rem;
+  padding: 1.2rem 3.2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #f4a226;
+  background-color: #fff;
+}
+
+.add-form button {
+  text-transform: uppercase;
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.add-form button:hover {
+  background-color: #2ecc71;
+}
+
+.list {
+  background-color: #5a3e2b;
+  color: #ffebb3;
+  padding: 4rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+
+.list ul {
+  list-style: none;
+  width: 90%;
+  max-width: 1200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.4rem;
+  justify-content: center;
+  align-content: start;
+  padding: 1rem;
+}
+
+.list li {
+  background: rgba(255, 235, 179, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 1.2rem 2rem;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.list li:hover {
+  background: rgba(255, 235, 179, 0.2);
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 235, 179, 0.4);
+}
+
+.list li.packed {
+  opacity: 0.7;
+  transform: scale(0.98);
+}
+
+input[type="checkbox"] {
+  height: 2.4rem;
+  width: 2.4rem;
+  accent-color: #e67e22;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+input[type="checkbox"]:hover {
+  transform: scale(1.2);
+}
+
+.list li span {
+  font-size: 2rem;
+  flex: 1;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffebb3;
+  transition: all 0.3s;
+}
+
+.list li button {
+  background: rgba(231, 76, 60, 0.1);
+  border: none;
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  color: #ff4757;
+}
+
+.list li button:hover {
+  background-color: #ff4757;
+  color: white;
+  transform: rotate(90deg) scale(1.1);
+}
+
+.actions {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.actions button,
+.list select {
+  text-transform: uppercase;
+  padding: 1rem 2.8rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.stats {
+  background-color: #1abc9c;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  padding: 3.2rem 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Scrollbar */
+.list ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+.list ul::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.list ul::-webkit-scrollbar-thumb {
+  background: #f4a226;
+  border-radius: 10px;
+}
+
+.list ul::-webkit-scrollbar-thumb:hover {
+  background: #e67e22;
+}
